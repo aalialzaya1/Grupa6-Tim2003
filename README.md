@@ -1,4 +1,6 @@
 # Grupa6-Tim2003
+### Naziv teme: Uređivanje interijera
+
 
 ### Članovi tima: 
 - Dedić Irma
