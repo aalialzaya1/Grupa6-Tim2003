@@ -20,3 +20,25 @@
 - Mogućnost pregleda prodajnih mjesta partner-firmi u kojima klijent može pronaći artikal 
 - Mogućnost brisanja korisničkog računa 
 - Mogućnost ocjenjivanja usluge
+
+### Procesi: 
+- Novi klijenti kreiraju svoje račune pri čemu unose sljedeće podatke:  ime, prezime,  e-mail, datum rođenja, adresu, sliku(nije obavezno).  Pri registraciji partner – firme unose se osnovni podaci o firmi kao što su naziv, adresa, kontakt informacije. Svi korisnici moraju imati pristupne podatke: username i password.  Sistem validira unesene podatke te u slučaju korektnosti istih odobrava kreiranje računa, dok u suprotnom obavještava korisnika o neispravnosti ulaznih podataka.  Neregistrovani klijenti mogu pregledati bilo koji dostupan sadržaj. Registrovanim klijentima se, pored osnovnih mogućnosti, nude i posebne pogodnosti u vidu raznih popusta na kupljene proizvode.
+- Prijava omogućava pristup sistemu registrovanim korisnicima. 
+- Korisniku je omogućeno ažuriranje korisničkog profila što uključuje eventualnu promjenu njegovih podataka.
+- Klijent se može informisati o najnovijim trendovima uređenja interijera, pročitati korisne savjete za uštedu prostora, a u ponudi su i brojne kreativne ideje za postizanje potpune funkcionalnosti doma.
+- Klijentu je omogućeno da bira namještaj po svojim željama i potrebama. 
+- Klijent može da bira različite filtere pretraživanja kao što su boja, struktura, stil, cijena, lokacija. Slijedi pregled prodajnih mjesta koja odgovaraju željama klijenta.
+- Klijent može da na osnovu unesenih dimenzija prostorije dobije pregled namještaja koji najbolje odgovara njegovom raspoloživom prostoru.
+- Korisniku je omogućeno da u svakom trenutku može obrisati korisnički račun.
+- Klijent može ocijeniti kvalitet usluge nekom od ocjena sa skale od 1 do 10 i time učestvovati u formiranju ukupne ocjene aplikacije.
+
+### Akteri :
+- Korisnik: 
+   - Registrovani korisnik - osoba koja koristi aplikaciju i ima sve mogućnosti koje nudi aplikacija (odgovarajući popusti na kupljene artikle sa partner- kompanijama)
+   - Neregistrovani korisnik (gost) –osoba koja koristi aplikaciju i ima samo osnovne privilegije
+- Administrator – osoba sa najvišim nivoom privilegija koja održava sistem(dodaje nove sadržaje, ažurira postojeće, briše nepotrebne)
+-	Dekorater – stručna osoba čija je osnovna uloga savjetovanje korisnika kako urediti prostorije
+- Registrovana partner-kompanija – Kompanija sa kojom je ostvarena saradnja na osnovu koje registrovani korisnici uživaju posebne privilegije
+- Sistem – vrsi sve automatske radnje(validacija unesenih podataka pri registraciji ili ponovnom pokušaju pristupa)
+
+
