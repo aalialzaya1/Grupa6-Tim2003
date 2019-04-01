@@ -25,7 +25,7 @@
 - Mogućnost ocjenjivanja usluge
 
 ### Procesi: 
-- Novi klijenti kreiraju svoje račune pri čemu unose sljedeće podatke:  ime, prezime,  e-mail, datum rođenja, adresu, sliku(nije obavezno).  Pri registraciji partner – firme unose se osnovni podaci o firmi kao što su naziv, adresa, kontakt informacije. Svi korisnici moraju imati pristupne podatke: username i password.  Sistem validira unesene podatke te u slučaju korektnosti istih odobrava kreiranje računa, dok u suprotnom obavještava korisnika o neispravnosti ulaznih podataka.  Neregistrovani klijenti mogu pregledati bilo koji dostupan sadržaj. Registrovanim klijentima se, pored osnovnih mogućnosti, nude i posebne pogodnosti u vidu raznih popusta na kupljene proizvode.
+- Novi klijenti kreiraju svoje račune pri čemu unose sljedeće podatke:  ime, prezime,  e-mail, datum rođenja, adresu, sliku(nije obavezno).  Pri registraciji partner – firme unose se osnovni podaci o firmi kao što su naziv, adresa, kontakt informacije. Svi korisnici moraju imati pristupne podatke: username i password.  Sistem validira unesene podatke te u slučaju korektnosti istih odobrava kreiranje računa, dok u suprotnom obavještava korisnika o neispravnosti ulaznih podataka.  Neregistrovani klijenti mogu pregledati bilo koji dostupan sadržaj. Registrovanim klijentima se, pored osnovnih mogućnosti, nude i posebne pogodnosti u vidu raznih popusta u poslovnicama partner-firmi.
 - Prijava omogućava pristup sistemu registrovanim korisnicima. 
 - Korisniku je omogućeno ažuriranje korisničkog profila što uključuje eventualnu promjenu njegovih podataka.
 - Klijent se može informisati o najnovijim trendovima uređenja interijera, pročitati korisne savjete za uštedu prostora, a u ponudi su i brojne kreativne ideje za postizanje potpune funkcionalnosti doma.
@@ -37,7 +37,7 @@
 
 ### Akteri :
 - Korisnik: 
-  - Registrovani korisnik - osoba koja koristi aplikaciju i ima sve mogućnosti koje nudi aplikacija (odgovarajući popusti na kupljene artikle sa partner- kompanijama)
+  - Registrovani korisnik - osoba koja koristi aplikaciju i ima sve mogućnosti koje nudi aplikacija (odgovarajući popusti na artikle u poslovnicama partner-firmi)
   - Neregistrovani korisnik (gost) –osoba koja koristi aplikaciju i ima samo osnovne privilegije
 - Administrator – osoba sa najvišim nivoom privilegija koja održava sistem(dodaje nove sadržaje, ažurira postojeće, briše nepotrebne)
 -	Dekorater – stručna osoba čija je osnovna uloga savjetovanje korisnika kako urediti prostorije
