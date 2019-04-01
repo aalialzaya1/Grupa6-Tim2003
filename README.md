@@ -34,8 +34,8 @@
 
 ### Akteri :
 - Korisnik: 
-   - Registrovani korisnik - osoba koja koristi aplikaciju i ima sve mogućnosti koje nudi aplikacija (odgovarajući popusti na kupljene artikle sa partner- kompanijama)
-   - Neregistrovani korisnik (gost) –osoba koja koristi aplikaciju i ima samo osnovne privilegije
+  - Registrovani korisnik - osoba koja koristi aplikaciju i ima sve mogućnosti koje nudi aplikacija (odgovarajući popusti na kupljene artikle sa partner- kompanijama)
+  - Neregistrovani korisnik (gost) –osoba koja koristi aplikaciju i ima samo osnovne privilegije
 - Administrator – osoba sa najvišim nivoom privilegija koja održava sistem(dodaje nove sadržaje, ažurira postojeće, briše nepotrebne)
 -	Dekorater – stručna osoba čija je osnovna uloga savjetovanje korisnika kako urediti prostorije
 - Registrovana partner-kompanija – Kompanija sa kojom je ostvarena saradnja na osnovu koje registrovani korisnici uživaju posebne privilegije
