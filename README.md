@@ -1,7 +1,8 @@
 # Grupa6-Tim2003
 ### Naziv teme: Uređivanje interijera
 
-
+ ![56232446_2327872807425936_8834291632409935872_n](https://user-images.githubusercontent.com/44214001/55282604-5ed03e80-5347-11e9-990a-a87d34070c19.jpg)
+ 
 ### Članovi tima: 
 - Dedić Irma
 - Haskić Asim
