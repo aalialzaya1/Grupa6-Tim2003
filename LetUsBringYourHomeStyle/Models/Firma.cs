@@ -1,16 +1,56 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace LetUsBringYourHomeStyle.Models
 {
     public class Firma
+
     {
-        private string naziv { get; set; }
-        private string adresa { get; set; }
-        private string grad { get; set; }
+        [ScaffoldColumn(false)]
+        int FirmaID;
+        [Required]
+        private string naziv;
+        [Required]
+        private string adresa;
+        [Required]
+        private string grad;
         private List<Namjestaj> namjestaj;
+        public string Naziv
+        {
+            get
+            {
+                return naziv;
+            }
+            set
+            {
+                naziv = value;
+            }
+        }
+        public string Adresa
+        {
+            get
+            {
+                return adresa;
+            }
+            set
+            {
+                adresa = value;
+            }
+        }
+        public string Grad
+        {
+            get
+            {
+                return grad;
+            }
+            set
+            {
+                grad = value;
+            }
+        }
 
         public Firma(string naziv, string adresa, string grad)
         {
@@ -23,5 +63,10 @@ namespace LetUsBringYourHomeStyle.Models
         {
             namjestaj.Add(n);
         }
+        public List<Namjestaj> dajNamjestaj()
+        {
+            return namjestaj;
+        }
+
     }
 }

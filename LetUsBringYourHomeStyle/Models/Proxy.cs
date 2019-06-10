@@ -5,10 +5,13 @@ using System.Threading.Tasks;
 
 namespace LetUsBringYourHomeStyle.Models
 {
-    public class Proxy: IPopust
+    public class Proxy : IPopust
     {
-        Popust popusti = new IPopust();
+        // Popust popusti = new IPopust();
         int nivoPristupa = 0;
+
+
+
         public void pristup(string username, string password)
         {
             if (password == "Home1234")
@@ -19,11 +22,16 @@ namespace LetUsBringYourHomeStyle.Models
             else nivoPristupa = 0;
         }
 
-        List<Namjestaj> pregledTrenutnihPopusta()
+        public List<Namjestaj> pregledTrenutnihPopusta()
         {
             List<Namjestaj> l = new List<Namjestaj>();
-            if (nivoPristupa == 1) return Popust.pregledTrenutnihPopusta();
+            if (nivoPristupa == 1) return pregledTrenutnihPopusta();
             else return l;
-        }
+        }
+
+        public List<Namjestaj> pregledSvihPopusta()
+        {
+            return null;
+        }
     }
 }

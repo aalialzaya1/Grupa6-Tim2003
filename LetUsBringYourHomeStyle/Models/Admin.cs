@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace LetUsBringYourHomeStyle.Models
 {
-    public class Admin
+    public class Admin: SistemskiKorisnik
     
     {
 
