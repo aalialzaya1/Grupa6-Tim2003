@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 using LetUsBringYourHomeStyle;
@@ -8,19 +7,13 @@ using LetUsBringYourHomeStyle;
 
 namespace LetUsBringYourHomeStyle.Models
 {
-    public class Popust: IPopust
+    public class Popust : IPopust
     {
-        [ScaffoldColumn(false)]
-        int PopustID;
-        [Required]
-        private String naziv;
-        [Required]
-        private Double postotak;
-        [Required]
+        private string naziv;
+        private double postotak;
         private DateTime pocetak;
-        [Required]
         private DateTime kraj;
-        public String Naziv
+        public string Naziv
         {
             get
             {
@@ -31,7 +24,7 @@ namespace LetUsBringYourHomeStyle.Models
                 naziv = value;
             }
         }
-        public Double Postotak
+        public double Postotak
         {
             get
             {
@@ -65,28 +58,19 @@ namespace LetUsBringYourHomeStyle.Models
             }
         }
 
-        public List<Namjestaj> pregledSvihPopusta()
+        public List<Namjestaj> pregledTrenutnihPopusta()
         {
-            throw new NotImplementedException();
-        }
-
-        /*List<Namjestaj> pregledTrenutnihPopusta()
-        {
-            List<Namjestaj> l;
-            foreach(Firma firma in firme)
+            List<Namjestaj> l=new List<Namjestaj>();
+            foreach (Firma firma in firme)
             {
-               foreach(Namjestaj n in namjestaj)
+                foreach (Namjestaj n in namjestaj)
                 {
-                    if (DateTime.Now<Kraj) l.add(n);
+                    if (DateTime.Now < Kraj) l.Add(n);
                 }
             }
             return l;
 
-        }*/
-
-        List<Namjestaj> IPopust.pregledTrenutnihPopusta()
-        {
-            throw new NotImplementedException();
         }
+
     }
 }
