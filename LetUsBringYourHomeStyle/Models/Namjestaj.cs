@@ -7,16 +7,28 @@ namespace LetUsBringYourHomeStyle.Models
 {
     public class Namjestaj
     {
-        private string naziv { get; set; }
-        private double cijena { get; set; }
-        private string dezen { get; set; }
-        private Kategorija kategorija { get; set; }
-        private Dimenzija dimenzija { get; set; }
-        private string materijal { get; set; }
-        private string stil { get; set; }
-        
+        private string naziv;
+        private double cijena;
+        private string dezen;
+        private Kategorija kategorija;
+        private Dimenzija dimenzija;
+        private string materijal;
+        private string stil;
+        private Popust popust;
 
-        public Namjestaj(string naziv, double cijena, string dezen, Kategorija kategorija, Dimenzija dimenzija, string materijal, string stil)
+        public Popust Popust
+        {
+            get
+            {
+                return popust;
+            }
+            set
+            {
+                popust = value;
+            }
+        }
+
+        public Namjestaj(global::System.String naziv, global::System.Double cijena, global::System.String dezen, Kategorija kategorija, Dimenzija dimenzija, global::System.String materijal, global::System.String stil, Boolean naPopustu)
         {
             this.naziv = naziv;
             this.cijena = cijena;
@@ -25,6 +37,9 @@ namespace LetUsBringYourHomeStyle.Models
             this.dimenzija = dimenzija;
             this.materijal = materijal;
             this.stil = stil;
+            this.naPopustu = naPopustu;
         }
+       
+
     }
 }
