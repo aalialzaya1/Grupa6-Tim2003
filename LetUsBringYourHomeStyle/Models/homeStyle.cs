@@ -26,29 +26,116 @@ namespace LetUsBringYourHomeStyle.Models
             firme.Add(f);
         }
 
-        public List<Namjestaj> dimenzijaPretraga(Dimenzija d, Namjestaj n)
+        public List<Namjestaj> dimenzijaPretraga(string nazivNamjestaja, double duzina, double sirina, double visina)
         {
-            throw new NotImplementedException();
+            List<Namjestaj> l;
+            foreach (Firma firma in firme)
+            {
+                foreach (Namjestaj n in namjestaj)
+                {
+                    if (n.Naziv.ToLower() == nazivNamjestaja.ToLower() && n.Dimenzija.duzina == duzina && n.Dimenzija.sirina == sirina && n.Dimenzija.visina == visina)
+                        l.add(n);
+                }
+                
+            }
+            return l;
         }
-
-        public List<Namjestaj> komadPretraga(Namjestaj n)
+        public List<Namjestaj> nazivPretraga(string nazivNamjestaja)
         {
-            throw new NotImplementedException();
-        }
+            List<Namjestaj> l;
+            foreach (Firma firma in firme)
+            {
+                foreach (Namjestaj n in firma.namjestaj)
+                {
+                    if (n.Naziv.ToLower() == nazivNamjestaja.ToLower()) l.add(n);
+                }
 
+            }
+            return l;
+        }
         public List<Namjestaj> kategorijaPretraga(Kategorija k)
         {
-            throw new NotImplementedException();
+            List<Namjestaj> l;
+            foreach (Firma firma in firme)
+            {
+                foreach (Namjestaj n in firma.namjestaj)
+                {
+                    if (n.Kategorija==k) l.add(n);
+                }
+            }
+            return l;
+        }
+        public List<Namjestaj> firmaPretraga(string nazivFirme)
+        {
+            List<Namjestaj> l;
+            foreach(Firma firma in firme)
+            {
+                if (firma.Naziv.ToLower() == nazivFirme.ToLower())
+                    return firma.Namjestaj;
+            }
+            return l;
+            
+        }
+        public List<Namjestaj> cijenaPretraga(double cijena)
+  
+      {
+            List<Namjestaj> l;
+            foreach (Firma firma in firme)
+            {
+                foreach (Namjestaj n in firma.namjestaj)
+                {
+                    if (n.Cijena == cijena) l.add(n);
+                }
+
+            }
+            return l;
+        }
+        public List<Namjestaj> stilPretraga(string stil)
+
+        {
+            List<Namjestaj> l;
+            foreach (Firma firma in firme)
+            {
+                foreach (Namjestaj n in firma.namjestaj)
+                {
+                    if (n.Stil.ToLower()=stil.ToLower()) l.add(n);
+                }
+
+            }
+            return l;
+        }
+        public List<Namjestaj> materijalPretraga(string materijal)
+
+        {
+            List<Namjestaj> l;
+            foreach (Firma firma in firme)
+            {
+                foreach (Namjestaj n in firma.namjestaj)
+                {
+                    if (n.Materijal.ToLower() = materijal.ToLower()) l.add(n);
+                }
+
+            }
+            return l;
+        }
+        public List<Namjestaj> dezenPretraga(string dezen)
+
+        {
+            List<Namjestaj> l;
+            foreach (Firma firma in firme)
+            {
+                foreach (Namjestaj n in firma.namjestaj)
+                {
+                    if (n.Dezen.ToLower() = dezen.ToLower()) l.add(n);
+                }
+
+            }
+            return l;
         }
 
-        public List<Namjestaj> firmaPretraga(Firma f)
-        {
-            throw new NotImplementedException();
-        }
 
-        public List<Namjestaj> savNamjestajPretraga(Dimenzija d)
-        {
-            throw new NotImplementedException();
-        }
+
+
+
     }
 }

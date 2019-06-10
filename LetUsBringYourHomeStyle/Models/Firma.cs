@@ -7,11 +7,32 @@ namespace LetUsBringYourHomeStyle.Models
 {
     public class Firma
     {
-        private string naziv { get; set; }
+        private string naziv;
         private string adresa { get; set; }
         private string grad { get; set; }
         private List<Namjestaj> namjestaj;
-
+        public string Naziv
+        {
+            get
+            {
+                return naziv;
+            }
+            set
+            {
+                naziv = value;
+            }
+        }
+        public List<Namjestaj>Namjestaj
+        {
+            get
+            {
+                return namjestaj;
+            }
+            set
+            {
+                namjestaj = value;
+            }
+        }
         public Firma(string naziv, string adresa, string grad)
         {
             this.naziv = naziv;

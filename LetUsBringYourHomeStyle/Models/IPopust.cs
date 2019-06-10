@@ -8,7 +8,7 @@ namespace LetUsBringYourHomeStyle.Models
     public interface IPopust
     {
         List<Namjestaj> pregledTrenutnihPopusta();
-        List<Namjestaj> pregledSvihPopusta();
+        
 
     }
 }
