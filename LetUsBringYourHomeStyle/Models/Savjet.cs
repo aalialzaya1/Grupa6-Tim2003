@@ -63,6 +63,5 @@ namespace LetUsBringYourHomeStyle.Models
             this.sadrzaj = sadrzaj;
             this.kategorija = kategorija;
         }
-
     }
 }

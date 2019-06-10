@@ -9,10 +9,14 @@ namespace LetUsBringYourHomeStyle.Models
     interface IPretraga
     {
         //pretrage namjestaja
-        List<Namjestaj> dimenzijaPretraga(Dimenzija d, Namjestaj n);
-        List<Namjestaj> komadPretraga(Namjestaj n);
+        
+        List<Namjestaj> nazivPretraga(string nazivNamjestaja);
         List<Namjestaj> kategorijaPretraga(Kategorija k);
-        List<Namjestaj> firmaPretraga(Firma f);
-        List<Namjestaj> savNamjestajPretraga(Dimenzija d);
+        List<Namjestaj> firmaPretraga(string nazivFirme);
+        List<Namjestaj> cijenaPretraga(double cijena);
+        List<Namjestaj> stilPretraga(string stil);
+        List<Namjestaj> dezenPretraga(string dezen);
+        List<Namjestaj> materijalPretraga(string materijal);
+        List<Namjestaj> dimenzijaPretraga(string nazivNamjestaja, double duzina, double sirina, double visina);
     }
 }
