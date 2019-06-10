@@ -33,6 +33,17 @@ namespace LetUsBringYourHomeStyle.Models
                 namjestaj = value;
             }
         }
+        public string Adresa
+        {
+            get
+            {
+                return adresa;
+            }
+            set
+            {
+                adresa = value;
+            }
+        }
         public Firma(string naziv, string adresa, string grad)
         {
             this.naziv = naziv;
