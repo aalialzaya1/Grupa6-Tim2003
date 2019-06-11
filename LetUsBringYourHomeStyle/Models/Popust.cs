@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using LetUsBringYourHomeStyle;
-
+using static LetUsBringYourHomeStyle.Models.homeStyle;
 
 namespace LetUsBringYourHomeStyle.Models
 {
     public class Popust : IPopust
     {
+       
         private string naziv;
         private double postotak;
         private DateTime pocetak;
@@ -57,13 +58,13 @@ namespace LetUsBringYourHomeStyle.Models
                 kraj = value;
             }
         }
-
+        homeStyle h;
         public List<Namjestaj> pregledTrenutnihPopusta()
         {
             List<Namjestaj> l=new List<Namjestaj>();
-            foreach (Firma firma in firme)
+            foreach (Firma firma in h.dajFirme())
             {
-                foreach (Namjestaj n in namjestaj)
+                foreach (Namjestaj n in firma.dajNamjestaj())
                 {
                     if (DateTime.Now < Kraj) l.Add(n);
                 }

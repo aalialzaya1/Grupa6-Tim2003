@@ -12,7 +12,17 @@ namespace LetUsBringYourHomeStyle.Models
         public enum Kategorija { DnevnaSoba, Kuhinja, SpavacaSoba, Kupatilo, DjecijaSOba, Ured, Dekoracija }
         private List<Savjet> savjeti;
         public List<Firma> firme;
-
+        public List<Firma> Firme
+        {
+            get
+            {
+                return firme;
+            }
+            set
+            {
+                firme = value;
+            }
+        }
         public homeStyle()
         {
             savjeti = new List<Savjet>();
@@ -26,6 +36,10 @@ namespace LetUsBringYourHomeStyle.Models
         public void dodajFirmu(Firma f)
         {
             firme.Add(f);
+        }
+        public List<Firma> dajFirme()
+        {
+            return firme;
         }
 
         public delegate void Callback(string s);
