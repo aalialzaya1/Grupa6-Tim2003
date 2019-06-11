@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace LetUsBringYourHomeStyle.Models
 {
-    public class PredstavnikFirme
+    public class PredstavnikFirme: SistemskiKorisnik
     {
         private Firma firma;
 
