@@ -10,7 +10,7 @@ namespace LetUsBringYourHomeStyle.Models
     public class homeStyle : IPretraga
     {
         public enum Kategorija { DnevnaSoba, Kuhinja, SpavacaSoba, Kupatilo, DjecijaSOba, Ured, Dekoracija }
-        private List<Savjet> savjeti;
+        public List<Savjet> savjeti;
         public List<Firma> firme;
         public List<Firma> Firme
         {

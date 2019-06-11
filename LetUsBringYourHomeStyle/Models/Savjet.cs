@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 using static LetUsBringYourHomeStyle.Models.homeStyle;
@@ -8,10 +9,17 @@ namespace LetUsBringYourHomeStyle.Models
 {
     public class Savjet
     {
-        private string naziv;
-        private string autor;
-        private string sadrzaj;
-        private Kategorija kategorija { get; set; }
+        [ScaffoldColumn(false)]
+        private int SavjetID { get; set; }
+        [Required]
+        public string naziv;
+        [Required]
+        public string autor;
+        [Required]
+        public string sadrzaj;
+        public Kategorija kategorija { get; set; }
+        [Required]
+        public int KategorijaID { get; set; }
         public string Naziv
         {
             get

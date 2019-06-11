@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 using LetUsBringYourHomeStyle;
@@ -9,11 +10,16 @@ namespace LetUsBringYourHomeStyle.Models
 {
     public class Popust : IPopust
     {
-       
-        private string naziv;
-        private double postotak;
-        private DateTime pocetak;
-        private DateTime kraj;
+        [ScaffoldColumn(false)]
+        public int PopustID { get; set; }
+        [Required]
+        public string naziv;
+        [Required]
+        public double postotak;
+        [Required]
+        public DateTime pocetak;
+        [Required]
+        public DateTime kraj;
         public string Naziv
         {
             get

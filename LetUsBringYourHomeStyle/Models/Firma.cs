@@ -10,14 +10,14 @@ namespace LetUsBringYourHomeStyle.Models
 
     {
         [ScaffoldColumn(false)]
-        int FirmaID;
+        public int FirmaID { get; set; }
         [Required]
-        private string naziv;
+        public string naziv;
         [Required]
-        private string adresa;
+        public string adresa;
         [Required]
-        private string grad;
-        private List<Namjestaj> namjestaj;
+        public string grad;
+        public List<Namjestaj> namjestaj;
         public string Naziv
         {
             get

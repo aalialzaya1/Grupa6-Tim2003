@@ -1,13 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace LetUsBringYourHomeStyle.Models
 {
-    public class PredstavnikFirme: SistemskiKorisnik
+    public class PredstavnikFirme : SistemskiKorisnik
     {
-        private Firma firma;
+        [ScaffoldColumn(false)]
+        public int PredstavnikFirmeID { get; set; }
+        [Required]
+        public int FirmaID { get; set; }
+        public Firma firma;
 
         public PredstavnikFirme(Firma firma)
         {
