@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace LetUsBringYourHomeStyle.Models
 {
-    public class RegistrovaniKorisnik:SistemskiKorisnik, IObserver
+    public class RegistrovaniKorisnik:IObserver
     {
         [ScaffoldColumn(false)]
         public int RegistrovaniKorisnikID { get; set; }
