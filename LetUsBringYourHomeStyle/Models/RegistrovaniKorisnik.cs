@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace LetUsBringYourHomeStyle.Models
 {
-    public class RegistrovaniKorisnik:IObserver
+    public class RegistrovaniKorisnik:IObserver, SistemskiKorisnik
     {
         private string ime;
         private string prezime;

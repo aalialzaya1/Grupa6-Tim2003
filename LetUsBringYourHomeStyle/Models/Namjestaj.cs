@@ -109,7 +109,7 @@ namespace LetUsBringYourHomeStyle.Models
 
 
 
-        public Namjestaj(global::System.String naziv, global::System.Double cijena, global::System.String dezen, Kategorija kategorija, Dimenzija dimenzija, global::System.String materijal, global::System.String stil, Boolean naPopustu)
+        public Namjestaj(string naziv, double cijena, string dezen, Kategorija kategorija, Dimenzija dimenzija, string materijal, string stil, Popust popust)
         {
             this.naziv = naziv;
             this.cijena = cijena;
@@ -118,7 +118,8 @@ namespace LetUsBringYourHomeStyle.Models
             this.dimenzija = dimenzija;
             this.materijal = materijal;
             this.stil = stil;
-            this.naPopustu = naPopustu;
+            this.popust = popust;
+            
         }
 
 
