@@ -26,9 +26,14 @@ namespace LetUsBringYourHomeStyle.Models
         public homeStyle homes;
         [Required]
         public string stanje;
-
-
-
+        [Required]
+        private string username;
+        [Required]
+        public string password;
+        [Required]
+        public string email;
+        [Required]
+        public string telefon;
         public RegistrovaniKorisnik(string ime, string prezime, string idPopust, DateTime datumRodjenja, string adresa, string grad, homeStyle homes)
         {
             this.ime = ime;
@@ -72,8 +77,7 @@ namespace LetUsBringYourHomeStyle.Models
             }
             set
             {
-                idPopust
- = value;
+                idPopust = value;
 
             }
         }
@@ -127,7 +131,50 @@ namespace LetUsBringYourHomeStyle.Models
 
             }
         }
-
+        public string Telefon
+        {
+            get
+            {
+                return telefon;
+            }
+            set
+            {
+                telefon = value;
+            }
+        }
+        public string Email
+        {
+            get
+            {
+                return email;
+            }
+            set
+            {
+                email = value;
+            }
+        }
+        public string Username
+        {
+            get
+            {
+                return username;
+            }
+            set
+            {
+                username = value;
+            }
+        }
+        public string Password
+        {
+            get
+            {
+                return password;
+            }
+            set
+            {
+                password = value;
+            }
+        }
         public RegistrovaniKorisnik(homeStyle subjekt, string ime, string prezime, string idPopust, DateTime datum, string adresa, string grad)
         {
             this.homes = subjekt;
