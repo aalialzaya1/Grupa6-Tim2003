@@ -20,6 +20,8 @@ namespace LetUsBringYourHomeStyle.Models
         public DateTime pocetak;
         [Required]
         public DateTime kraj;
+        [Required]
+        public int RegistrovaniKorisnikID { get; set; }
         public string Naziv
         {
             get

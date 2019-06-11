@@ -9,6 +9,7 @@ namespace LetUsBringYourHomeStyle.Models
 
     public class homeStyle : IPretraga
     {
+        public int  homeStyleID { get; set; }
         public enum Kategorija { DnevnaSoba, Kuhinja, SpavacaSoba, Kupatilo, DjecijaSOba, Ured, Dekoracija }
         public List<Savjet> savjeti;
         public List<Firma> firme;

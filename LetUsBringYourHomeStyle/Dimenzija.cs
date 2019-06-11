@@ -52,7 +52,7 @@ namespace LetUsBringYourHomeStyle
             }
         }
         public Dimenzija() { }
-        public Dimenzija(Double visina, Double duzina, Double sirina)
+        public Dimenzija(double visina, double duzina, double sirina)
         {
             this.visina = visina;
             this.duzina = duzina;

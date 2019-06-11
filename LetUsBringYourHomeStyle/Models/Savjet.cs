@@ -10,7 +10,7 @@ namespace LetUsBringYourHomeStyle.Models
     public class Savjet
     {
         [ScaffoldColumn(false)]
-        private int SavjetID { get; set; }
+        public int SavjetID { get; set; }
         [Required]
         public string naziv;
         [Required]

@@ -15,7 +15,7 @@ namespace LetUsBringYourHomeStyle.Models
         [Required]
         public string prezime;
         [Required]
-        public string idPopust;
+        public int PopustID { get; set; }
         [Required]
         public DateTime datumRodjenja;
         [Required]
@@ -34,7 +34,8 @@ namespace LetUsBringYourHomeStyle.Models
         public string email;
         [Required]
         public string telefon;
-        public RegistrovaniKorisnik(string ime, string prezime, string idPopust, DateTime datumRodjenja, string adresa, string grad, homeStyle homes)
+
+        /*public RegistrovaniKorisnik(string ime, string prezime, string idPopust, DateTime datumRodjenja, string adresa, string grad, homeStyle homes)
         {
             this.ime = ime;
             this.prezime = prezime;
@@ -44,7 +45,7 @@ namespace LetUsBringYourHomeStyle.Models
             this.grad = grad;
 
             this.homes = homes;
-        }
+        }*/
         public string Ime
         {
             get
@@ -69,18 +70,7 @@ namespace LetUsBringYourHomeStyle.Models
 
             }
         }
-        public string IdPopust
-        {
-            get
-            {
-                return idPopust;
-            }
-            set
-            {
-                idPopust = value;
-
-            }
-        }
+   
         public DateTime DatumRodjenja
         {
             get
@@ -175,7 +165,7 @@ namespace LetUsBringYourHomeStyle.Models
                 password = value;
             }
         }
-        public RegistrovaniKorisnik(homeStyle subjekt, string ime, string prezime, string idPopust, DateTime datum, string adresa, string grad)
+        /*public RegistrovaniKorisnik(homeStyle subjekt, string ime, string prezime, string idPopust, DateTime datum, string adresa, string grad)
         {
             this.homes = subjekt;
             this.ime = ime;
@@ -186,7 +176,7 @@ namespace LetUsBringYourHomeStyle.Models
             this.grad = grad;
             subjekt.Obavijesti += Azuriraj; 
             
- }
+         }*/
         public void Azuriraj(string subjektStanje)
         {
             stanje = subjektStanje;

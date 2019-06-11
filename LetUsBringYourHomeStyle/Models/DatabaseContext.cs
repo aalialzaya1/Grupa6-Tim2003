@@ -33,10 +33,12 @@ namespace LetUsBringYourHomeStyle.Models
             modelBuilder.Entity<Admin>().ToTable("Admin");
             modelBuilder.Entity<Firma>().ToTable("Firma");
             modelBuilder.Entity<Namjestaj>().ToTable("Namjestaj");
-            modelBuilder.Entity<Popust>().ToTable("Recenzija");
+            modelBuilder.Entity<Recenzija>().ToTable("Recenzija");
             modelBuilder.Entity<RegistrovaniKorisnik>().ToTable("RegistrovaniKorisnik");
             modelBuilder.Entity<Savjet>().ToTable("Savjet");
             modelBuilder.Entity<Dimenzija>().ToTable("Dimenzija");
+            modelBuilder.Entity<Popust>().ToTable("Popust");
+
         }
 
     }

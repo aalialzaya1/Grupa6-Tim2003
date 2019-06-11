@@ -124,7 +124,7 @@ namespace LetUsBringYourHomeStyle.Models
 
 
 
-        public Namjestaj(string naziv, double cijena, string dezen, Kategorija kategorija, Dimenzija dimenzija, string materijal, string stil, Popust popust)
+        /*public Namjestaj(string naziv, double cijena, string dezen, Kategorija kategorija, Dimenzija dimenzija, string materijal, string stil, Popust popust)
         {
             this.naziv = naziv;
             this.cijena = cijena;
@@ -135,7 +135,7 @@ namespace LetUsBringYourHomeStyle.Models
             this.stil = stil;
             this.popust = popust;
             
-        }
+        }*/
 
 
     }
