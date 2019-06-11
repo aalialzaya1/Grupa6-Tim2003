@@ -11,6 +11,7 @@ namespace LetUsBringYourHomeStyle.Models
         //pretrage namjestaja
         
         List<Namjestaj> nazivPretraga(string nazivNamjestaja);
+
         List<Namjestaj> kategorijaPretraga(Kategorija k);
         List<Namjestaj> firmaPretraga(string nazivFirme);
         List<Namjestaj> cijenaPretraga(double cijena);
