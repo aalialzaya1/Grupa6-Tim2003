@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace LetUsBringYourHomeStyle.Models
@@ -29,7 +30,19 @@ namespace LetUsBringYourHomeStyle.Models
         public delegate void Callback(string s);
         public event Callback Obavijesti;
         Simulator simulator = new Simulator();
-        public string subjektStanje { get; set; }
+        public string subjektStanje;
+        public string SubjektStanje
+        {
+            get
+            {
+                return subjektStanje;
+            }
+            set
+            {
+                subjektStanje = value;
+            }
+        }
+
         public void Run()
         {
             new Thread(new ThreadStart(Run)).Start();
