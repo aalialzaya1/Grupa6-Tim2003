@@ -10,10 +10,18 @@ namespace LetUsBringYourHomeStyle.Models
     public class Simulator:IEnumerable
     {
         string[] pomjeranja = { "1", "3", "5" };
+        public IEnumerator Enumerator
+        {
+            get
+            {
+                foreach (string element in pomjeranja)
+                    yield return element;
+            }
+        }
+
         public IEnumerator GetEnumerator()
         {
-            foreach (string element in pomjeranja)
-                return element;
+            return pomjeranja.GetEnumerator();
         }
     }
 }
