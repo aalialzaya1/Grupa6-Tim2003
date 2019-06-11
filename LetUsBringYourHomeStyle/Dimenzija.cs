@@ -2,14 +2,22 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
 
 namespace LetUsBringYourHomeStyle
 {
     public class Dimenzija
     {
-        private Double visina;
-        private Double duzina;
-        private Double sirina;
+        [ScaffoldColumn(false)]
+        public int DimenzijaID { get; set; }
+        [Required]
+        public Double visina;
+        [Required]
+        public Double duzina;
+        [Required]
+        public Double sirina;
+
+
         public Double Visina
         {
             get

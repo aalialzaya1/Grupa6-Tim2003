@@ -2,19 +2,30 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
 
 namespace LetUsBringYourHomeStyle.Models
 {
-    public class RegistrovaniKorisnik:IObserver, SistemskiKorisnik
+    public class RegistrovaniKorisnik:SistemskiKorisnik, IObserver
     {
-        private string ime;
-        private string prezime;
-        private string idPopust;
-        private DateTime datumRodjenja;
-        private string adresa;
-        private string grad;
-        private homeStyle homes;
-        private string stanje;
+        [ScaffoldColumn(false)]
+        public int RegistrovaniKorisnikID { get; set; }
+        [Required]
+        public string ime;
+        [Required]
+        public string prezime;
+        [Required]
+        public string idPopust;
+        [Required]
+        public DateTime datumRodjenja;
+        [Required]
+        public string adresa;
+        [Required]
+        public string grad;
+        [Required]
+        public homeStyle homes;
+        [Required]
+        public string stanje;
 
 
 
@@ -117,9 +128,9 @@ namespace LetUsBringYourHomeStyle.Models
             }
         }
 
-        public RegistrovaniKorisnik(homeStyle subjekt, string ime, string prezime, string idPopust, Date datum, string adresa, string grad)
+        public RegistrovaniKorisnik(homeStyle subjekt, string ime, string prezime, string idPopust, DateTime datum, string adresa, string grad)
         {
-            this.home = subjekt;
+            this.homes = subjekt;
             this.ime = ime;
             this.prezime = prezime;
             this.idPopust = idPopust;
