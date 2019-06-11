@@ -26,10 +26,22 @@ namespace LetUsBringYourHomeStyle.Models
         public DbSet<Recenzija> Recenzija { get; set; }
         //public DbSet<TEntity> Kategorija { get; set; }
         public DbSet<RegistrovaniKorisnik> RegistrovaniKorisnik { get; set; }
-        public DbSet<SistemskiKorisnik> SistemskiKorisnik { get; set; } // sistemski
-        public DbSet<Savjet> Savjet { get; set; }//savjet
-
+        public DbSet<SistemskiKorisnik> SistemskiKorisnik { get; set; }
+        public DbSet<Savjet> Savjet { get; set; }
         public DbSet<Dimenzija> Dimenzija { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Admin>().ToTable("Admin");
+            modelBuilder.Entity<Firma>().ToTable("Firma");
+            modelBuilder.Entity<Namjestaj>().ToTable("Namjestaj");
+            modelBuilder.Entity<PredstavnikFirme>().ToTable("PredstavnikFirme");
+            modelBuilder.Entity<Popust>().ToTable("Recenzija");
+            modelBuilder.Entity<RegistrovaniKorisnik>().ToTable("RegistrovaniKorisnik");
+            modelBuilder.Entity<SistemskiKorisnik>().ToTable("SistemskiKorisnik");
+            modelBuilder.Entity<Savjet>().ToTable("Savjet");
+            modelBuilder.Entity<Dimenzija>().ToTable("Dimenzija");
+        }
 
     }
 }

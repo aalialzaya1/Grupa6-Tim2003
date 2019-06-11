@@ -13,7 +13,7 @@ namespace LetUsBringYourHomeStyle.Models
         {
             this.firma = firma;
         }
-        public int Firma
+        public Firma Firma
         {
             get
             {

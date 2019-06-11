@@ -10,7 +10,7 @@ namespace LetUsBringYourHomeStyle.Models
         private string ime;
         private string prezime;
         private string idPopust;
-        private Date datumRodjenja;
+        private DateTime datumRodjenja;
         private string adresa;
         private string grad;
         private homeStyle homes;
@@ -18,7 +18,7 @@ namespace LetUsBringYourHomeStyle.Models
 
 
 
-        public RegistrovaniKorisnik(string ime, string prezime, string idPopust, Date datumRodjenja, string adresa, string grad, homeStyle homes)
+        public RegistrovaniKorisnik(string ime, string prezime, string idPopust, DateTime datumRodjenja, string adresa, string grad, homeStyle homes)
         {
             this.ime = ime;
             this.prezime = prezime;
@@ -66,7 +66,7 @@ namespace LetUsBringYourHomeStyle.Models
 
             }
         }
-        public Date DatumRodjenja
+        public DateTime DatumRodjenja
         {
             get
             {

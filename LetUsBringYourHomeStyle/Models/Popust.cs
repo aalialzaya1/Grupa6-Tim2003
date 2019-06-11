@@ -7,7 +7,7 @@ using LetUsBringYourHomeStyle;
 
 namespace LetUsBringYourHomeStyle.Models
 {
-    public class Popust:IPopust
+    public class Popust : IPopust
     {
         private string naziv;
         private double postotak;
@@ -58,19 +58,19 @@ namespace LetUsBringYourHomeStyle.Models
             }
         }
 
-        List<Namjestaj> pregledTrenutnihPopusta()
+        public List<Namjestaj> pregledTrenutnihPopusta()
         {
-            List<Namjestaj> l;
-            foreach(Firma firma in firme)
+            List<Namjestaj> l=new List<Namjestaj>();
+            foreach (Firma firma in firme)
             {
-               foreach(Namjestaj n in namjestaj)
+                foreach (Namjestaj n in namjestaj)
                 {
-                    if (DateTime.Now<Kraj) l.add(n);
+                    if (DateTime.Now < Kraj) l.Add(n);
                 }
             }
             return l;
 
         }
-        
+
     }
 }

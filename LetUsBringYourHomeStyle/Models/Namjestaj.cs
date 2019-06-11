@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using static LetUsBringYourHomeStyle.Models.homeStyle;
 
 namespace LetUsBringYourHomeStyle.Models
 {
@@ -82,7 +83,7 @@ namespace LetUsBringYourHomeStyle.Models
                 dezen = value;
             }
         }
-        public string Dimenzija
+        public Dimenzija Dimenzija
         {
             get
             {
@@ -119,7 +120,7 @@ namespace LetUsBringYourHomeStyle.Models
             this.stil = stil;
             this.naPopustu = naPopustu;
         }
-       
+
 
     }
 }

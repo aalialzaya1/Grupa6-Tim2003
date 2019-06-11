@@ -2,13 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using static LetUsBringYourHomeStyle.Models.homeStyle;
 
 namespace LetUsBringYourHomeStyle.Models
 {
-    public interface IPopust
+    interface IPopust
     {
         List<Namjestaj> pregledTrenutnihPopusta();
-        
-
     }
 }

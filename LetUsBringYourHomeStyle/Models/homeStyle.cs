@@ -5,10 +5,10 @@ using System.Threading.Tasks;
 
 namespace LetUsBringYourHomeStyle.Models
 {
-    
-    public class homeStyle: IPretraga
+
+    public class homeStyle : IPretraga
     {
-        public enum Kategorija {DnevnaSoba, Kuhinja, SpavacaSoba, Kupatilo, DjecijaSOba, Ured, Dekoracija }
+        public enum Kategorija { DnevnaSoba, Kuhinja, SpavacaSoba, Kupatilo, DjecijaSOba, Ured, Dekoracija }
         private List<Savjet> savjeti;
         private List<Firma> firme;
 
@@ -50,26 +50,31 @@ namespace LetUsBringYourHomeStyle.Models
 
             public List<Namjestaj> dimenzijaPretraga(string nazivNamjestaja, double duzina, double sirina, double visina)
         {
-            List<Namjestaj> l;
+            List<Namjestaj> l=new List<Namjestaj>();
             foreach (Firma firma in firme)
             {
-                foreach (Namjestaj n in namjestaj)
+                foreach (Namjestaj n in firma.dajNamjestaj())
                 {
-                    if (n.Naziv.ToLower() == nazivNamjestaja.ToLower() && n.Dimenzija.duzina == duzina && n.Dimenzija.sirina == sirina && n.Dimenzija.visina == visina)
-                        l.add(n);
+                    if (n.Naziv.ToLower() == nazivNamjestaja.ToLower() && n.Dimenzija.Duzina == duzina && n.Dimenzija.Sirina == sirina && n.Dimenzija.Visina == visina)
+                        l.Add(n);
                 }
-                
+
             }
             return l;
         }
         public List<Namjestaj> nazivPretraga(string nazivNamjestaja)
         {
-            List<Namjestaj> l;
+            List<Namjestaj> l=new List<Namjestaj>();
             foreach (Firma firma in firme)
             {
-                foreach (Namjestaj n in firma.namjestaj)
+                
+                foreach (Namjestaj n in firma.dajNamjestaj())
                 {
-                    if (n.Naziv.ToLower() == nazivNamjestaja.ToLower()) l.add(n);
+                    if (n.Naziv.ToLower() == nazivNamjestaja.ToLower())
+                    {
+                        l.Add(n);
+                    }
+                    
                 }
 
             }
@@ -77,36 +82,36 @@ namespace LetUsBringYourHomeStyle.Models
         }
         public List<Namjestaj> kategorijaPretraga(Kategorija k)
         {
-            List<Namjestaj> l;
+            List<Namjestaj> l=new List<Namjestaj>();
             foreach (Firma firma in firme)
             {
-                foreach (Namjestaj n in firma.namjestaj)
+                foreach (Namjestaj n in firma.dajNamjestaj())
                 {
-                    if (n.Kategorija==k) l.add(n);
+                    if (n.Kategorija == k) l.Add(n);
                 }
             }
             return l;
         }
         public List<Namjestaj> firmaPretraga(string nazivFirme)
         {
-            List<Namjestaj> l;
-            foreach(Firma firma in firme)
-            {
-                if (firma.Naziv.ToLower() == nazivFirme.ToLower())
-                    return firma.Namjestaj;
-            }
-            return l;
-            
-        }
-        public List<Namjestaj> cijenaPretraga(double cijena)
-  
-      {
-            List<Namjestaj> l;
+            List<Namjestaj> l=new List<Namjestaj>();
             foreach (Firma firma in firme)
             {
-                foreach (Namjestaj n in firma.namjestaj)
+                if (firma.Naziv.ToLower() == nazivFirme.ToLower())
+                    return firma.dajNamjestaj();
+            }
+            return l;
+
+        }
+        public List<Namjestaj> cijenaPretraga(double cijena)
+
+        {
+            List<Namjestaj> l=new List<Namjestaj>();
+            foreach (Firma firma in firme)
+            {
+                foreach (Namjestaj n in firma.dajNamjestaj())
                 {
-                    if (n.Cijena == cijena) l.add(n);
+                    if (n.Cijena == cijena) l.Add(n);
                 }
 
             }
@@ -115,13 +120,15 @@ namespace LetUsBringYourHomeStyle.Models
         public List<Namjestaj> stilPretraga(string stil)
 
         {
-            List<Namjestaj> l;
+            List<Namjestaj> l=new List<Namjestaj>();
             foreach (Firma firma in firme)
             {
-                foreach (Namjestaj n in firma.namjestaj)
+                foreach (Namjestaj n in firma.dajNamjestaj())
                 {
-                    if (n.Stil.ToLower()=stil.ToLower()) l.add(n);
+                    if (n.Stil.ToLower().Equals(stil.ToLower())) l.Add(n);
+                    
                 }
+                
 
             }
             return l;
@@ -129,12 +136,12 @@ namespace LetUsBringYourHomeStyle.Models
         public List<Namjestaj> materijalPretraga(string materijal)
 
         {
-            List<Namjestaj> l;
+            List<Namjestaj> l=new List<Namjestaj>();
             foreach (Firma firma in firme)
             {
-                foreach (Namjestaj n in firma.namjestaj)
+                foreach (Namjestaj n in firma.dajNamjestaj())
                 {
-                    if (n.Materijal.ToLower() = materijal.ToLower()) l.add(n);
+                    if (n.Materijal.ToLower().Equals(materijal.ToLower())) l.Add(n);
                 }
 
             }
@@ -143,12 +150,12 @@ namespace LetUsBringYourHomeStyle.Models
         public List<Namjestaj> dezenPretraga(string dezen)
 
         {
-            List<Namjestaj> l;
+            List<Namjestaj> l=new List<Namjestaj>();
             foreach (Firma firma in firme)
             {
-                foreach (Namjestaj n in firma.namjestaj)
+                foreach (Namjestaj n in firma.dajNamjestaj())
                 {
-                    if (n.Dezen.ToLower() = dezen.ToLower()) l.add(n);
+                    if (n.Dezen.ToLower().Equals(dezen.ToLower())) l.Add(n);
                 }
 
             }
