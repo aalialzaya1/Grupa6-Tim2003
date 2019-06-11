@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace LetUsBringYourHomeStyle.Models
 {
-    public class RegistrovaniKorisnik
+    public class RegistrovaniKorisnik:IObserver
     {
         private string ime;
         private string prezime;
@@ -14,6 +14,9 @@ namespace LetUsBringYourHomeStyle.Models
         private string adresa;
         private string grad;
         private homeStyle homes;
+        private string stanje;
+
+
 
         public RegistrovaniKorisnik(string ime, string prezime, string idPopust, Date datumRodjenja, string adresa, string grad, homeStyle homes)
         {
@@ -114,9 +117,23 @@ namespace LetUsBringYourHomeStyle.Models
             }
         }
 
-
-
-
+        public RegistrovaniKorisnik(homeStyle subjekt, string ime, string prezime, string idPopust, Date datum, string adresa, string grad)
+        {
+            this.home = subjekt;
+            this.ime = ime;
+            this.prezime = prezime;
+            this.idPopust = idPopust;
+            this.datumRodjenja = datum;
+            this.adresa = adresa;
+            this.grad = grad;
+            subjekt.Obavijesti += Azuriraj; 
+            
+ }
+        public void Azuriraj(string subjektStanje)
+        {
+            stanje = subjektStanje;
+            Console.WriteLine(ime + "-" + stanje);
+        }
 
 
 

@@ -26,7 +26,29 @@ namespace LetUsBringYourHomeStyle.Models
             firme.Add(f);
         }
 
-        public List<Namjestaj> dimenzijaPretraga(string nazivNamjestaja, double duzina, double sirina, double visina)
+        public delegate void Callback(string s);
+        public event Callback Obavijesti;
+        Simulator simulator = new Simulator();
+        public string subjektStanje { get; set; }
+        public void Run()
+        {
+            new Thread(new ThreadStart(Run)).Start();
+
+        }
+        void RadnaOperacija()
+        {
+            foreach (string s in simulator)
+            {
+                Console.WriteLine("Subjekt: " + s);
+                SubjektStanje = s;
+                Obavijesti(s); // pošalji notifikaciju o promijeni stanja
+                Thread.Sleep(10);
+            }
+        }
+
+
+
+            public List<Namjestaj> dimenzijaPretraga(string nazivNamjestaja, double duzina, double sirina, double visina)
         {
             List<Namjestaj> l;
             foreach (Firma firma in firme)
