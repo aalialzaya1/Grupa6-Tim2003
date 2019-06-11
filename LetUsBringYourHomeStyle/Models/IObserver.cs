@@ -7,6 +7,7 @@ namespace LetUsBringYourHomeStyle.Models
 {
     interface IObserver
     {
-        public void Azuriraj(string stanje);
+        public void Azuriraj(string stanje);
+
     }
 }
