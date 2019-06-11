@@ -20,6 +20,7 @@ namespace LetUsBringYourHomeStyle.Models
         }
         public void dodajSavjet(Savjet s)
         {
+
             savjeti.Add(s);
         }
         public void dodajFirmu(Firma f)
