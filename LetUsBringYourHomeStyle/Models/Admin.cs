@@ -5,9 +5,52 @@ using System.Threading.Tasks;
 
 namespace LetUsBringYourHomeStyle.Models
 {
-    public class Admin: SistemskiKorisnik
+    public class Admin
     
     {
+        [ScaffoldColumn(false)]
+        public int AdminID { get; set; }
+        [Required]
+        public string username;
+        public string Username
+        {
+            get
+            {
+                return username;
+            }
+            set
+            {
+                username = value;
+            }
+        }
+        [Required]
+        public string password;
+        public string Password
+        {
+            get
+            {
+                return password;
+            }
+            set
+            {
+                password = value;
+            }
+        }
+        [Required]
+        public string email;
+        public string Email
+        {
+            get
+            {
+                return email;
+            }
+            set
+            {
+                email = value;
+            }
+        }
+        
+        } 
 
-    }
 }
+
