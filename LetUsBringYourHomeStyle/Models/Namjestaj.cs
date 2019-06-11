@@ -2,20 +2,35 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
 using static LetUsBringYourHomeStyle.Models.homeStyle;
 
 namespace LetUsBringYourHomeStyle.Models
 {
     public class Namjestaj
     {
-        private string naziv;
-        private double cijena;
-        private string dezen;
-        private Kategorija kategorija;
-        private Dimenzija dimenzija;
-        private string materijal;
-        private string stil;
-        private Popust popust;
+        [ScaffoldColumn(false)]
+        public int NamjestajID { get; set; }
+        [Required]
+        public string naziv;
+        [Required]
+        public double cijena;
+        [Required]
+        public string dezen;
+        [Required]
+        public Kategorija kategorija;
+        [Required]
+        public Dimenzija dimenzija;
+        [Required]
+        public int DimenzijaID;
+        [Required]
+        public string materijal;
+        [Required]
+        public string stil;
+        [Required]
+        public Popust popust;
+        [Required]
+        public int PopustID;
 
         public Popust Popust
         {

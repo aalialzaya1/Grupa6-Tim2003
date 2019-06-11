@@ -2,14 +2,22 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
 
 namespace LetUsBringYourHomeStyle.Models
 {
     public class Recenzija
     {
-        private RegistrovaniKorisnik korisnik;
-        private string komentar;
-        private int ocjena;
+        [ScaffoldColumn(false)]
+        public int RecenzijaID { get; set; }
+        [Required]
+        public RegistrovaniKorisnik korisnik;
+        [Required]
+        public int RegistrovaniKorisnikID;
+        [Required]
+        public string komentar;
+        [Required]
+        public int ocjena;
 
         public Recenzija(RegistrovaniKorisnik korisnik, string komentar, int ocjena)
         {
