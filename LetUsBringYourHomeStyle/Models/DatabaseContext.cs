@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using static LetUsBringYourHomeStyle.Models.homeStyle;
+using LetUsBringYourHomeStyle.Models;
 
 namespace LetUsBringYourHomeStyle.Models
 {
@@ -40,6 +41,8 @@ namespace LetUsBringYourHomeStyle.Models
             modelBuilder.Entity<Popust>().ToTable("Popust");
 
         }
+
+        public DbSet<LetUsBringYourHomeStyle.Models.homeStyle> homeStyle { get; set; }
 
     }
 }

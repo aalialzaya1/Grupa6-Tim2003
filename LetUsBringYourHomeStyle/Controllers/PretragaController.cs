@@ -9,22 +9,22 @@ using LetUsBringYourHomeStyle.Models;
 
 namespace LetUsBringYourHomeStyle.Controllers
 {
-    public class RegistrovaniKorisniksPrijavaController : Controller
+    public class PretragaController : Controller
     {
         private readonly DatabaseContext _context;
 
-        public RegistrovaniKorisniksPrijavaController(DatabaseContext context)
+        public PretragaController(DatabaseContext context)
         {
             _context = context;
         }
 
-        // GET: RegistrovaniKorisniksPrijava
+        // GET: Pretraga
         public async Task<IActionResult> Index()
         {
-            return View(await _context.RegistrovaniKorisnik.ToListAsync());
+            return View(await _context.homeStyle.ToListAsync());
         }
 
-        // GET: RegistrovaniKorisniksPrijava/Details/5
+        // GET: Pretraga/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -32,39 +32,39 @@ namespace LetUsBringYourHomeStyle.Controllers
                 return NotFound();
             }
 
-            var registrovaniKorisnik = await _context.RegistrovaniKorisnik
-                .FirstOrDefaultAsync(m => m.RegistrovaniKorisnikID == id);
-            if (registrovaniKorisnik == null)
+            var homeStyle = await _context.homeStyle
+                .FirstOrDefaultAsync(m => m.homeStyleID == id);
+            if (homeStyle == null)
             {
                 return NotFound();
             }
 
-            return View(registrovaniKorisnik);
+            return View(homeStyle);
         }
 
-        // GET: RegistrovaniKorisniksPrijava/Create
+        // GET: Pretraga/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: RegistrovaniKorisniksPrijava/Create
+        // POST: Pretraga/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("PopustID,Ime,Prezime,DatumRodjenja,Adresa,Grad,Telefon,Email,Username,Password")] RegistrovaniKorisnik registrovaniKorisnik)
+        public async Task<IActionResult> Create([Bind("homeStyleID,SubjektStanje")] homeStyle homeStyle)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(registrovaniKorisnik);
+                _context.Add(homeStyle);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(registrovaniKorisnik);
+            return View(homeStyle);
         }
 
-        // GET: RegistrovaniKorisniksPrijava/Edit/5
+        // GET: Pretraga/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -72,22 +72,22 @@ namespace LetUsBringYourHomeStyle.Controllers
                 return NotFound();
             }
 
-            var registrovaniKorisnik = await _context.RegistrovaniKorisnik.FindAsync(id);
-            if (registrovaniKorisnik == null)
+            var homeStyle = await _context.homeStyle.FindAsync(id);
+            if (homeStyle == null)
             {
                 return NotFound();
             }
-            return View(registrovaniKorisnik);
+            return View(homeStyle);
         }
 
-        // POST: RegistrovaniKorisniksPrijava/Edit/5
+        // POST: Pretraga/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("PopustID,Ime,Prezime,DatumRodjenja,Adresa,Grad,Telefon,Email,Username,Password")] RegistrovaniKorisnik registrovaniKorisnik)
+        public async Task<IActionResult> Edit(int id, [Bind("homeStyleID,SubjektStanje")] homeStyle homeStyle)
         {
-            if (id != registrovaniKorisnik.RegistrovaniKorisnikID)
+            if (id != homeStyle.homeStyleID)
             {
                 return NotFound();
             }
@@ -96,12 +96,12 @@ namespace LetUsBringYourHomeStyle.Controllers
             {
                 try
                 {
-                    _context.Update(registrovaniKorisnik);
+                    _context.Update(homeStyle);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!RegistrovaniKorisnikExists(registrovaniKorisnik.RegistrovaniKorisnikID))
+                    if (!homeStyleExists(homeStyle.homeStyleID))
                     {
                         return NotFound();
                     }
@@ -112,10 +112,10 @@ namespace LetUsBringYourHomeStyle.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(registrovaniKorisnik);
+            return View(homeStyle);
         }
 
-        // GET: RegistrovaniKorisniksPrijava/Delete/5
+        // GET: Pretraga/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -123,30 +123,30 @@ namespace LetUsBringYourHomeStyle.Controllers
                 return NotFound();
             }
 
-            var registrovaniKorisnik = await _context.RegistrovaniKorisnik
-                .FirstOrDefaultAsync(m => m.RegistrovaniKorisnikID == id);
-            if (registrovaniKorisnik == null)
+            var homeStyle = await _context.homeStyle
+                .FirstOrDefaultAsync(m => m.homeStyleID == id);
+            if (homeStyle == null)
             {
                 return NotFound();
             }
 
-            return View(registrovaniKorisnik);
+            return View(homeStyle);
         }
 
-        // POST: RegistrovaniKorisniksPrijava/Delete/5
+        // POST: Pretraga/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var registrovaniKorisnik = await _context.RegistrovaniKorisnik.FindAsync(id);
-            _context.RegistrovaniKorisnik.Remove(registrovaniKorisnik);
+            var homeStyle = await _context.homeStyle.FindAsync(id);
+            _context.homeStyle.Remove(homeStyle);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool RegistrovaniKorisnikExists(int id)
+        private bool homeStyleExists(int id)
         {
-            return _context.RegistrovaniKorisnik.Any(e => e.RegistrovaniKorisnikID == id);
+            return _context.homeStyle.Any(e => e.homeStyleID == id);
         }
     }
 }
